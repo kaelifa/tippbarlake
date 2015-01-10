@@ -1,0 +1,38 @@
+%section.contentSection.contact#contact
+  .layoutWrapper
+    %h2 Contact
+
+    = form_tag '', class: "contactPanel contactForm" do
+      %h3 Send us a message
+      %p
+        = label_tag :name
+        = text_field_tag :name, size: 20, required: true
+
+      %p
+        = label_tag :email
+        = email_field_tag :email, size: 20, required: true
+
+      %p
+        = label_tag :Telephone
+        = text_field_tag :phone, size: 20
+
+      %p
+        = label_tag :message
+        = text_area_tag :message, rows: 3, cols: 20, required: true
+
+      %p
+        / %buttonclass.button#alertMe onclick="return sendTheMail();" Contact Us
+        = button_tag "Contact Us"
+
+    .contactPanel.contactAlt
+      %h3 Alternatively you can call us:
+      %p
+        %strong= partial "layouts/inc/mobile"
+
+      %h3 Or send us a tweet
+      %p
+        Twitter:
+        = partial "layouts/inc/twitter"
+
+      %h3 Perhaps you would prefer to email us:
+      %p= partial "layouts/inc/email"

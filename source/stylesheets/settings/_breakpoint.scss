@@ -1,0 +1,33 @@
+/**
+ * Use colours for breakpoints as there is no hierachry
+ * And makes it easy to debug
+ *
+ *
+ * Use with /helpers/view-breakpoints for debugging
+ */
+
+// $basic: 543px;
+// $pair: 456px 794px;
+
+// $view-aqua: 320px;
+$view-pink: 420px;
+// $view-purple: 420px 500px;
+// $view-plum: 0 440px;
+// $view-peach: 440px;
+// $view-violet: 0 760px;
+// $view-orange: 500px;
+// $view-tangerine: 500px 760px;
+$view-lime: 0 900px;
+$view-blue: 760px;
+$view-purple: 760px 900px;
+$view-green: 900px;
+$view-maroon: 900px 1300px;
+$view-red: 1000px;
+$view-yellow: 1200px;
+$view-magenta: 1300px;
+
+$breakpoint-to-ems: true;
+
+
+// @include breakpoint(750px);
+// @include susy-breakpoint(750px, 24);

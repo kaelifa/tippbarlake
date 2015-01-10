@@ -1,0 +1,8 @@
+%float-right {
+  float: right;
+  margin-left: 1.5em;
+}
+
+.fr {
+  @extend %float-right;
+}

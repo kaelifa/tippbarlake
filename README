@@ -1,0 +1,92 @@
+Tippbarlake
+============
+
+* Homepage: [www.tippbarlake.com](http://www.tippbarlake.com)
+
+
+## Technology used
+
+* [Vagrant 1.6.3](https://www.vagrantup.com/)
+	* [Vagrant box](http://www.vagrantbox.es/)
+* [Bundler version 1.7.9](http://bundler.io/
+* [Middleman](http://middlemanapp.com/)
+* [Sass 3.4.9 (Selective Steve)](http://sass-lang.com/)
+	* [Compass 1.0.1 (Polaris)](http://compass-style.org/)
+	* [Breakpoint 2.5.0](http://breakpoint-sass.com/)
+	* [Susyone 2.1.3](http://susy.oddbird.net/)
+	* [Modular Scale 2.0.5](https://github.com/at-import/modular-scale)
+	* [Normalize 1.5](https://rubygems.org/gems/compass-normalize)
+* [Modernizr 2.8.3](http://modernizr.com/)
+* [HTML5 Boilerplate 4.3.0](http://html5boilerplate.com/)
+
+### Vagrantfile
+
+Make sure the following lines are uncommented
+
+```
+config.vm.network "private_network", ip: "192.168.33.10"
+
+---
+config.vm.network "public_network"
+```
+
+```
+$ vagrant up
+
+```
+
+When asked:
+
+```
+11:22:28-kristina~/farmhand/templates (templates)$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Available bridged network interfaces:
+1) en0: Wi-Fi (AirPort)
+2) en1: Thunderbolt 1
+3) en2: Thunderbolt 2
+4) bridge0
+5) p2p0
+```
+
+Select 1
+
+```
+$ vagrant ssh
+
+$ sudo apt-get install ruby-dev
+
+$ sudo apt-get install build-essential
+
+$ sudo gem install bundler
+
+$ curl -sL https://deb.nodesource.com/setup | sudo bash -
+
+$ sudo apt-get install -y nodejs
+
+$ bundle install
+
+
+```
+
+## Middleman compile and run
+
+### Compile
+```
+$ cd /vagrant/
+$ bundle exec middleman server --force-polling
+```
+
+### View in a browser
+* [localhost:4567](http://localhost:4567/)
+* [127.0.0.1:4567](http://127.0.0.1:4567/)
+* [0.0.0.0:4567](http://0.0.0.0:4567/)
+
+### Build
+
+```
+$ bundle exec middleman build
+```
+
+Will compile to `/build/`

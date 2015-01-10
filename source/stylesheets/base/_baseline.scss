@@ -1,0 +1,8 @@
+$base-font-size: 14px;
+$base-padding: 18px;
+
+$base-line-height: $base-font-size * 2;
+@include establish-baseline;
+
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;

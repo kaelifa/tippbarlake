@@ -1,0 +1,33 @@
+.app-title {
+    @extend %app-heading;
+    background: $color-blue-light;
+    float: left;
+}
+
+.app-controls {
+    @include span(4 of 12);
+}
+
+.app-detail {
+    @include span(8 of 12 last);
+}
+
+.app-panel {
+    @extend %container-plain;
+}
+
+.app-panel__heading {
+    @extend %container-contrast;
+}
+
+.app-panel__footer {
+    @extend %container-plain;
+}
+
+.app-section {
+    border-bottom: 1px solid $color-aqua-light;
+
+    &:last-of-type {
+        border: none;
+    }
+}

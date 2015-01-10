@@ -1,0 +1,11 @@
+%primary-heading {
+    @include adjust-font-size-to(76px);
+    margin-bottom: rhythm(1, 76px);
+}
+
+%app-heading {
+    @include adjust-font-size-to($base-font-size);
+    font-weight: fw("regular");
+    line-height: 1;
+    margin: 0;
+}

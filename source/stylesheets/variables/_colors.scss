@@ -1,0 +1,21 @@
+$color-black: #000;
+$color-white: #fff;
+
+$color-blue: #00a0ce;
+$color-blue-light: lighten($color-blue, 6.5%); // #00baef
+$color-blue-dark: darken($color-blue, 7.5%); // 0283aa
+
+$color-grey: #bcbbbb;
+$color-grey-light: lighten($color-grey, 22.8%); // f6f6f6
+
+$color-yellow: #f8c660;
+
+$color-orange: #f28b00;
+$color-orange-dark: darken($color-orange, 7%); // cb7600
+
+$color-aqua-light: #eaf4f4;
+
+$color-base: lighten($color-black, 10%);
+
+$color-link: darken($color-blue, 2.5%);
+$color-link__hover: $color-blue;

@@ -1,0 +1,55 @@
+/**
+ * Compass sprites
+ *
+ * http://compass-style.org/reference/compass/utilities/sprites/
+ *
+ * Retina sprites courtesy of:
+ * https://github.com/AdamBrodzinski/Retina-Sprites-for-Compass
+ */
+
+// set this variable to 1 if you have to support IE8 and use respondjs
+// this also requires Modernizr's check for 'mediaqueries'
+// $retina-support-respondjs: 0;
+
+// default spacing for all sprites is set to 2px
+// use this variable if you want to change it
+$retina-sprite-spacing: 10px;
+
+// the first sprite is used as default
+// so you don't have to pass the name to the `retina-sprite` mixin
+@include retina-sprite-add(social, "sprites/1x/social/*.png", "sprites/2x/social/*.png");
+@include retina-sprite-add(social-reverse, "sprites/1x/social-reverse/*.png", "sprites/2x/social-reverse/*.png");
+
+// Usage
+// .icon-compass-logo {
+//   @include retina-sprite(social);
+// }
+
+// .myHoverActiveButton {
+//   @include retina-sprite(signIn, social, $hover: true, $active: true);
+// }
+
+// .icon-twitter {
+//   @include retina-sprite(twitter, social, $hover: true, $active: true);
+// }
+
+// .myHoverButton {
+//   @include retina-sprite(signIn, buttons, $hover: true);
+// }
+
+// .myActiveButton {
+//   @include retina-sprite(signIn, buttons, $active: true);
+// }
+
+// .myBoringButton {
+//   @include retina-sprite(signIn, buttons);
+// }
+
+// .myOtherButton {
+//   @include retina-background(arrow-right, center right no-repeat);
+
+//   // for demo, not required
+//   display: inline-block;
+//   padding: 10px;
+//   padding-right: 30px;
+// }

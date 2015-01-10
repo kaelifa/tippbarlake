@@ -1,0 +1,92 @@
+/**
+ * Adds breakpoint colours to any element
+ * to show which breakpoint is currently in use
+ *
+ * @Usage: @extend %view-breakpoints;
+ */
+
+%view-breakpoints {
+
+  // @each $color, $breakpoint in (
+  //   $view-aqua: 320px,
+  //   $view-pink: 420px,
+  //   $view-purple: "420px 500px",
+  //   $view-plum: 0 440px,
+  //   $view-peach: 440px,
+  //   $view-violet: "0 760px",
+  //   $view-orange: 500px,
+  //   $view-tangerine: "500px 760px",
+  //   $view-blue: 760px,
+  //   $view-lime: "760px 830px",
+  //   $view-maroon: 830px,
+  //   $view-green: 900px,
+  //   $view-red: 1000px )
+
+  // #{$color}: $breakpoint;
+
+  // @include breakpoint($view-#{$color}) {
+  //   background-color: #{$color};
+  // }
+
+  // @include breakpoint($view-aqua) {
+  //   background-color: aqua;
+  // }
+
+  @include breakpoint($view-pink) {
+    background-color: pink;
+  }
+
+  // @include breakpoint($view-purple) {
+  //   background-color: purple;
+  // }
+
+  // @include breakpoint($view-plum) {
+  //   background-color: plum;
+  // }
+
+  // @include breakpoint($view-peach) {
+  //   background-color: peach;
+  // }
+
+  // @include breakpoint($view-violet) {
+  //   background-color: violet;
+  // }
+
+  // @include breakpoint($view-orange) {
+  //   background-color: orange;
+  // }
+
+  // @include breakpoint($view-tangerine) {
+  //   background-color: tangerine;
+  // }
+
+  @include breakpoint($view-blue) {
+    background-color: blue;
+  }
+
+  // @include breakpoint($view-purple) {
+  //   background-color: purple;
+  // }
+
+  @include breakpoint($view-green) {
+    background-color: green;
+  }
+
+  // @include breakpoint($view-maroon) {
+  //   background-color: maroon;
+  // }
+
+  @include breakpoint($view-red) {
+    background-color: red;
+  }
+
+  @include breakpoint($view-yellow) {
+    background-color: yellow;
+  }
+
+  @include breakpoint($view-magenta) {
+    background-color: magenta;
+  }
+
+// @extend %view-breakpoints;
+}

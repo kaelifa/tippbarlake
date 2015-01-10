@@ -1,0 +1,13 @@
+img {
+  border: 0;
+  max-width: 100%;
+  @if $legacy-support-for-ie7 {
+    // Improve image quality when scaled in IE 7.
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+// img[src$=".gif"],
+// img[src$=".png"] {
+//   @extend %crisp-edges;
+// }

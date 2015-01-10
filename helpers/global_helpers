@@ -1,0 +1,13 @@
+require "pathname"
+
+module GlobalHelpers
+  def page_title
+    title = "Exmoor Logs | "
+    if data.page.title
+      title << data.page.title
+    else
+      title << t("index.sub_title")
+    end
+    title
+  end
+end

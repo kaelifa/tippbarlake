@@ -1,0 +1,17 @@
+/**
+ * A very basic RGBa fallback mixin
+ *
+ *
+ * NB: This needs updating to a better mixin
+ *
+ * @usage: @include rgba-bg($color-grey, 50);
+ */
+
+@mixin rgba-bg($hex, $a) {
+    //  for older browers
+    background-color: $hex;
+    background-color: ($hex, ($a/100));
+
+    // for modern browsers
+    background-color: rgba($hex, ($a/100));
+}

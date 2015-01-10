@@ -1,0 +1,4 @@
+a {
+    @include link-colors($color-link, $hover: $color-link__hover);
+    @include hover-link;
+}

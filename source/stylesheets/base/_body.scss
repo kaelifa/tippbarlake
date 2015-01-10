@@ -1,0 +1,12 @@
+body {
+  @include adjust-font-size-to($base-font-size);
+  background: $color-white;
+  font-family: $font-base;
+
+  // Debug helpers
+  // @extend %view-breakpoints;
+  // @include debug-vertical-alignment;
+
+  margin: 0;
+  padding: 0;
+}

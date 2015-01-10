@@ -1,0 +1,71 @@
+%icomoon {
+    font-family: 'icomoon';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: fw("regular");
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+
+    // Better Font Rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@function char-from-code($iso-char) {
+    @return unquote('\"#{$iso-char}\"');
+}
+
+// set up the placeholders
+%icon {
+    background: transparent;
+    border: none;
+    color: $color-white;
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+
+    @each $icon, $unicode in (
+        map: \e601,
+        settings: \e600,
+        user: \e602)
+    {
+        &-#{$icon}-before {
+            &:before {
+                // call the char-from-code function to attempt to escape
+                content: char-from-code($unicode);
+            }
+        }
+
+        &-#{$icon}-after {
+            &:after {
+                content: char-from-code($unicode);
+            }
+        }
+    }
+}
+
+.icon {
+    @extend %icomoon;
+    @extend %icon;
+
+    .disabled & {
+        color: $color-grey;
+    }
+
+    @each $icon-placeholder, $icon-content in (
+        map: before,
+        settings: before,
+        user: before)
+    {
+        &__#{$icon-placeholder} {
+            @extend %icon-#{$icon-placeholder}-#{$icon-content};
+        }
+    }
+}
+
+.icon__label {
+    @extend %visually-hidden;
+}

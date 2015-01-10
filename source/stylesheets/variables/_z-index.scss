@@ -1,0 +1,25 @@
+/**
+ * A clean way to deal with z-index layers in Sass
+ * Based on http://css-tricks.com/handling-z-index/
+ *
+ *
+ * by Hugo Giraudel - http://www.sitepoint.com/better-solution-managing-z-index-sass/
+ * @Usage: z-index: z("default");
+ */
+
+$z-layers: (
+  "always-on-top": 6,
+  "modal-button": 5,
+  "modal": 4,
+  "overlay": 3,
+  "minimise": 2,
+  "default": 1
+);
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}

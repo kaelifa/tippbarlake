@@ -1,0 +1,30 @@
+//     @section     Import fonts
+//     @note        First we import the fonts we are using
+@import url(http://fonts.googleapis.com/css?family=Exo:400,700);
+
+// @font-face {
+//     font-family: 'icomoon';
+//     src: font-url('icomoon/icomoon.eot?-it5y24');
+//     src: font-url('icomoon/icomoon.eot?#iefix-it5y24') format('embedded-opentype'),
+//          font-url('icomoon/icomoon.woff?-it5y24') format('woff'),
+//          font-url('icomoon/icomoon.ttf?-it5y24') format('truetype'),
+//          font-url('icomoon/icomoon.svg?-it5y24#icomoon') format('svg');
+//     font-weight: fw("regular");
+//     font-style: normal;
+// }
+
+//     @section     font stack
+
+$font-helvetica-neue:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-exo:              "Exo", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+$font-sans-serif:       $font-helvetica-neue;
+$font-serif:            $font-exo;
+
+$font-base:             $font-sans-serif;
+
+// contrast copy font
+// $font-base-contrast: $font-serif;
+
+// Heading font
+$font-heading: $font-serif;

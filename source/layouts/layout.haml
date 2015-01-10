@@ -1,0 +1,14 @@
+!!!5
+%html.no-js(lang="en"){:class => data.page.head_classes}
+  = partial "layouts/inc/html-head"
+
+  %body{class: page_classes}
+
+    = partial "layouts/inc/layout-header"
+
+    %main.layoutMain(role="main")
+      = Typogruby.improve(yield)
+
+    = partial "layouts/inc/layout-footer"
+
+  = partial "layouts/inc/ga"
